@@ -1,0 +1,137 @@
+{
+	"info": {
+		"_postman_id": "27c3ab3e-77d6-4f85-8f10-63b789a83c6b",
+		"name": "CLAVERPY",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "CREATE MOVIE",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"Sonic 2\",\r\n    \"relaseDate\": \"2022-12-22\",\r\n    \"directors\" : [\r\n        {\r\n            \"name\": \"Mario\"\r\n        }\r\n    ],\r\n    \"actors\" : [\r\n        {\r\n            \"name\": \"Nereida\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/movies/create",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"movies",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE ACTOR",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Bruno\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/actors/create",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"actors",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE DIRECTOR",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Juan\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/directors/create",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"directors",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FIND ALL",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/movies/all",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"movies",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FIND BY TITLE",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/movies/byTitle?title=Sonic 2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"movies",
+						"byTitle"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "Sonic 2"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
